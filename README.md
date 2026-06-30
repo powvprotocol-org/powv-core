@@ -32,9 +32,10 @@ The official web infrastructure is currently being deployed to anchor global doc
 * Git & standard toolchains
 
 ### Repository Structure
-```text
+
 ├── firmware/         # Edge computing telemetry and physical oracle scripts
-├── core/             # PoWV consensus consensus logic and state validation
+├── core/             # PoWV consensus logic and state validation
+├── security/         # Cryptographic HSM configs, hardware root-of-trust & auditing
 ├── docs/             # Technical specifications and architectural diagrams
 └── README.md         # Protocol overview
 
