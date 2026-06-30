@@ -95,12 +95,14 @@ Infrastructure & Enterprise systems design
 Macroeconomic modeling
 
 Strategic Direction
+
 PoWV is being developed with a long-term focus on enterprise adoption, institutional integration,
 regulatory compatibility, and scalable infrastructure.
 
 Philosophy: Bitcoin proved digital scarcity. PoWV focuses on verifiable physical integrity.
 
 Status
+
 Current Stage: Research & Architecture / Enterprise Framework Development
 
 Exploration: Strategic Partnerships
