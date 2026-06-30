@@ -4,7 +4,7 @@ An open-source, decentralized architecture engineered for **Cyber-Physical Syste
 
 ---
 
-## 💡 Overview
+##  Overview
 
 Developed by **Gabriel de Almeida Santos Silva**, the Proof of Weighted Value (PoWV) protocol leverages physical oracles and edge computing nodes to verify, compute, and anchor high-integrity industrial data directly onto decentralized networks. By calculating value metrics at the physical-digital boundary, PoWV mitigates consensus vulnerabilities typical of legacy web3 oracle implementations.
 
@@ -15,7 +15,7 @@ Developed by **Gabriel de Almeida Santos Silva**, the Proof of Weighted Value (P
 
 ---
 
-## 🌐 Official Channels
+## Official Channels
 
 The official web infrastructure is currently being deployed to anchor global documentation and technical whitepapers:
 
@@ -24,7 +24,7 @@ The official web infrastructure is currently being deployed to anchor global doc
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 * Industrial-grade Edge Gateway / Microcontroller (ESP32/ARM Cortex ecosystem)
