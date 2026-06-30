@@ -31,7 +31,7 @@ The official web infrastructure is currently being deployed to anchor global doc
 * Cryptographic hardware security module (HSM) for node identification
 * Git & standard toolchains
 
-### Repository Structure
+Repository Structure
 
 ├── firmware/         # Edge computing telemetry and physical oracle scripts
 ├── core/             # PoWV consensus logic and state validation
