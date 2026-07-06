@@ -75,7 +75,6 @@ The global market for physical asset verification spans trillions of dollars acr
 ```text
 Repository Structure
 
-```text
 ├── firmware/         # Edge computing telemetry and physical oracle scripts
 ├── core/             # PoWV consensus logic and state validation
 ├── security/         # Cryptographic HSM configs, hardware root-of-trust & auditing
@@ -111,9 +110,9 @@ Contact & Official Channels
 
 Partnerships, enterprise collaboration, and research inquiries:
 
-Email: gabriel@powvprotocol.org / powv.protocol@proton.me
+Email: gabriel@powvprotocol.com / powv.protocol@proton.me
 
-Official Web: powvprotocol.org | powvprotocol.com
+Official Web: powvprotocol.com | powvprotocol.org
 
 Legal Notice
 
