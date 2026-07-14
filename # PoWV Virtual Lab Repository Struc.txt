@@ -44,5 +44,3 @@ This document describes the exported repository structure for GitHub, excluding 
 - `tests/` — test cases and validation scripts.
 - `backup/` — repository backup and history cleanup scripts.
 
-## Export guidance
-The exported GitHub repository should not include secrets or industrial artifacts.
