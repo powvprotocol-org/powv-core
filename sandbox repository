@@ -1,0 +1,49 @@
+TELEMETRY INGESTION & CONSENSUS FLOW
+============================================================
+
++ [1] EDGE HARDWARE (Sensor / Scale)
+  ├──► Generates compact binary payload (132 bytes)
+  └──► Cryptographic Signature: ECDSA P-256 (raw r||s)
+
++ [2] EDGE GATEWAY (Ingestion Node)
+  ├──► Payload validation against `unsigned` bytes
+  ├──► Replay-Attack Prevention (SQLite state tracking)
+  └──► Routes minimal hash forward
+
++ [3] BLOCKCHAIN AUDIT LAYER (Consensus)
+  ├──► In-memory chain calculation
+  └──► Merkle Root generation
+
++ [4] ANCHOR SERVICE (Immutable Storage)
+  └──► Persists Merkle proofs to `immutable_anchor_ledger.log`
+
+sequenceDiagram
+    autonumber
+    participant H as 📟 Edge Hardware
+    participant G as 🛡️ Edge Gateway
+    participant B as 🔗 Audit Layer
+    participant A as ⚓ Anchor Service
+
+    H->>G: POST /gateway_bin (132-byte payload)
+    Note over H,G: ECDSA P-256 Hardware Sealed
+    G-->>G: Validate Strict Size & Anti-Replay (SQLite)
+    G->>B: Forward Unsigned Hash Payload
+    B-->>B: Compute In-Memory Merkle Root
+    B->>A: Dispatch Evidence for Anchoring
+    A-->>A: Append to immutable_anchor_ledger.log
+    A-->>G: Broadcast Status: SECURE
+    G-->>H: 200 OK (QUEUED_FOR_ANCHOR)
+
+// MEMORY MAP: PoWV Strict Telemetry Payload (132 Bytes)
+// =====================================================================
+// OFFSET    SIZE         TYPE       DESCRIPTION
+// =====================================================================
+// 0x0000    [ 8 Bytes]   uint64     DEVICE_ID  (Unique Hardware Node)
+// 0x0008    [ 8 Bytes]   uint64     TIMESTAMP  (Epoch Ingestion Time)
+// 0x0010    [ 8 Bytes]   float64    WEIGHT     (Metrological Mass/RWA)
+// 0x0018    [48 Bytes]   bytes      PADDING    (Reserved / Zero-Knowledge)
+// ---------------------------------------------------------------------
+// 0x0048    [64 Bytes]   bytes      SIGNATURE  (ECDSA P-256 Raw r||s)
+// =====================================================================
+// TOTAL: 132 BYTES // STRICT ENFORCEMENT AT EDGE_GATEWAY
+
