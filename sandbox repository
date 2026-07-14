@@ -2,7 +2,7 @@
 
 > High-level reference architecture of the PoWV Protocol public research environment.
 
-```text
+
 ┌──────────────────────────────────────────────────────────────┐
 │                 TELEMETRY INGESTION PIPELINE                 │
 └──────────────────────────────────────────────────────────────┘
