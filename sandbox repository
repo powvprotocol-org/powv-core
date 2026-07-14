@@ -1,26 +1,28 @@
 # Telemetry Ingestion & Trust Flow — PoWV Protocol
 
-The PoWV (Proof of Weighted Value) Protocol transforms raw, trusted industrial telemetry into independently verifiable digital evidence through a hardware-assisted, layered trust architecture[cite: 2].
+The PoWV (Proof of Weighted Value) Protocol transforms raw, trusted industrial telemetry into independently verifiable digital evidence through a hardware-assisted, 
+layered trust architecture.
 
 ---
 
 ## Logical Processing Flow
 
-1. Edge Device: Captures trusted industrial telemetry from physical infrastructure[cite: 2].
+1. Edge Device: Captures trusted industrial telemetry from physical infrastructure.
 2. Secure Gateway: Performs secure ingestion, validation, and preprocessing of events.
-3. Verification Layer: Produces verifiable digital evidence and integrity proofs[cite: 2].
-4. Evidence Registry: Maintains immutable records for independent auditability[cite: 2].
+3. Verification Layer: Produces verifiable digital evidence and integrity proofs.
+4. Evidence Registry: Maintains immutable records for independent auditability.
 
 ---
 
 ## Core Design Principles
 
-* Hardware-Assisted Trust: Establishes secure hardware enclaves as the root of trust[cite: 2].
+* Hardware-Assisted Trust: Establishes secure hardware enclaves as the root of trust
 * Verifiable Telemetry: Eliminates data silos through cryptographic proofs.
 * Cryptographic Integrity: End-to-end encryption prevents any data tampering.
-* End-to-End Traceability: Full historical tracking from raw sensor capturing to consensus[cite: 2].
+* End-to-End Traceability: Full historical tracking from raw sensor capturing to consensus
 * Modular Architecture: Pluggable design to avoid vendor lock-in.
 
 ---
 
-NOTE: This repository represents the public research implementation of the PoWV Protocol. Production firmware configurations, specific gateway connectors, and proprietary hardware integrations are omitted for operational security[cite: 2].
+NOTE: This repository represents the public research implementation of the PoWV Protocol. Production firmware configurations, 
+specific gateway connectors, and proprietary hardware integrations are omitted for operational security
