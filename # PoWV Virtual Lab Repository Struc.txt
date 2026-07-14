@@ -1,0 +1,57 @@
+# PoWV Virtual Lab Repository Structure
+
+This document describes the exported repository structure for GitHub, excluding industrial secrets and runtime artifacts.
+
+## Top-level files
+- `.gitignore` — repository ignore rules for secrets, logs, virtualenvs, and generated artifacts.
+- `README.md` — main project overview and usage.
+- `README_PoWV_SBD_v1.md` — technical overview and validation guide for the PoWV-SBD-v1 proof format.
+- `requirements.txt` — Python dependency list.
+- `EXECUTIVE_SUMMARY.txt` — high-level analysis summary.
+- `SECURITY_ANALYSIS_REPORT.txt` — validation and security findings.
+- `TEST_RESULTS_DETAILED.txt` — test results and validation summary.
+- `EVENT_SIZE_REPORT.md` / `event_sizes.csv` — event size analysis.
+- `TEST_RS485_PLAN.md` — RS485 test plan.
+- `run_realtime.ps1` — Windows script for real-time runs.
+
+## Core PoWV components
+- `powv_compact_event.py` — compact binary packet encoder/decoder and signature helpers.
+- `edge_gateway.py` — gateway service for binary packet ingestion, signature verification, and replay protection.
+- `blockchain_audit.py` — blockchain audit layer, Merkle root calculation, and chain inspection.
+- `anchor_service.py` — anchoring service for evidence persistence and audit signing.
+- `event_feeder.py` — event sender for binary packet generation and submission.
+- `hardware_oracle.py` — hardware oracle simulation.
+- `geolocation_service.py` — local geolocation service.
+- `satellite_link.py` — satellite link simulation client.
+- `export_audit_public_key.py` — exports audit public key for verification.
+- `verify_evidence.py` / `verify_evidence_watcher.py` — evidence verification tools.
+- `monitor_stream.py` — stream monitoring utility.
+- `send_test_packet.py` — test packet sender.
+
+## Tools
+- `tools/device_keygen.py` — generate ECDSA P-256 device key pairs.
+- `tools/register_device.py` — device provisioning helper.
+- `tools/batch_sender.py` — batch event sending utility.
+- `tools/flush_chain_to_ledger.py` — flush chain roots to ledger.
+- `tools/generate_report_pdf.py`, `tools/generate_pdf.py`, `tools/inspect_pdf.py` — PDF/report utilities.
+- `tools/inspect_blockchain_routes.py`, `tools/inspect_gateway_routes.py` — inspection utilities.
+- `tools/kill_by_port.py` — free a listening port.
+- `tools/test_end_to_end.py`, `tools/test_signature.py`, `tools/test_tamper_and_duplicate.py` — automated test scripts.
+- `tools/remove_secrets.md` / `tools/remove_secrets.ps1` — secret cleanup guidance.
+
+## Directories
+- `logs/` — runtime logs, SQLite databases, anchors, and generated evidence.
+- `tests/` — test cases and validation scripts.
+- `backup/` — repository backup and history cleanup scripts.
+
+## Export guidance
+The exported GitHub repository should not include secrets or industrial artifacts.
+
+Exclude or remove before export:
+- `device_priv.pem` — private device key material.
+- `device_pub.pem` — device public key output used for provisioning tests.
+- `.venv/` — local Python virtual environment.
+- `logs/` — runtime logs and generated evidence files.
+- `*.pem`, `*.key`, `*.db`, `*.db-shm`, `*.db-wal`, `*.bin`, `*.log` — secret and generated artifacts.
+
+The file tree above represents the public structural view of the repository without industrial secret material.
