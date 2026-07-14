@@ -1,127 +1,99 @@
-# Telemetry Ingestion & Trust Flow
+# 🛡️ Telemetry Ingestion & Trust Flow | PoWV Protocol
 
-> High-level reference architecture of the PoWV Protocol public research environment.
-
-
-┌──────────────────────────────────────────────────────────────┐
-│                 TELEMETRY INGESTION PIPELINE                 │
-└──────────────────────────────────────────────────────────────┘
-
-        ┌─────────────────────┐
-        │  Edge Hardware      │
-        │─────────────────────│
-        │ Industrial Sensors  │
-        │ Secure Devices      │
-        │ Trusted Telemetry   │
-        └──────────┬──────────┘
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │  Edge Gateway       │
-        │─────────────────────│
-        │ Input Validation    │
-        │ Integrity Checks    │
-        │ Event Processing    │
-        └──────────┬──────────┘
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │  Trust Layer         │
-        │─────────────────────│
-        │ Evidence Generation  │
-        │ Audit Processing     │
-        │ Integrity Validation │
-        └──────────┬──────────┘
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │ Evidence Registry    │
-        │─────────────────────│
-        │ Immutable Records    │
-        │ Verification Layer   │
-        │ Long-Term Audit      │
-        └─────────────────────┘
-```
+The **PoWV (Proof of Weighted Value) Protocol** transforms raw, trusted industrial telemetry into independently verifiable digital evidence through a hardware-assisted, layered trust architecture.
 
 ---
 
-## Logical Flow
+## 🏗️ Architectural Topology
 
-```mermaid
-flowchart LR
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         TELEMETRY INGESTION PIPELINE                         │
+└──────────────────────────────────────────────────────────────────────────────┘
 
-A[Edge Hardware]
---> B[Telemetry Gateway]
+                                 [⚡ Edge Device]
+                                        │
+                                        ▼
+                            ┌───────────────────────┐
+                            │  Trusted Acquisition  │
+                            └───────────┬───────────┘
+                                        │
+                                        ▼
+                            ┌───────────────────────┐
+                            │    Secure Gateway     │
+                            ├───────────────────────┤
+                            │ • Input Validation    │
+                            │ • Integrity Checks    │
+                            │ • Event Processing    │
+                            └───────────┬───────────┘
+                                        │
+                                        ▼
+                            ┌───────────────────────┐
+                            │      Trust Layer      │
+                            ├───────────────────────┤
+                            │ • Evidence Creation   │
+                            │ • Verification        │
+                            │ • Audit Processing    │
+                            └───────────┬───────────┘
+                                        │
+                                        ▼
+                            ┌───────────────────────┐
+                            │   Evidence Registry   │
+                            ├───────────────────────┤
+                            │ • Immutable Records   │
+                            │ • Traceability        │
+                            │ • Long-Term Audit     │
+                            └───────────────────────┘
 
-B
---> C[Integrity Verification]
+Logical Processing Flow
+The sequence below illustrates the end-to-end data lifecycle from acquisition to immutable proof registration:
 
-C
---> D[Evidence Processing]
-
-D
---> E[Trust Registry]
-
-E
---> F[Independent Verification]
-```
-
----
-
-## Operational Sequence
-
-```mermaid
 sequenceDiagram
     autonumber
+    
+    participant D as 📟 Edge Device
+    participant G as 🛡️ Secure Gateway
+    participant V as 🔍 Verification Layer
+    participant R as ⛓️ Evidence Registry
 
-    participant H as Edge Hardware
-    participant G as Gateway
-    participant V as Verification Layer
-    participant R as Evidence Registry
+    D->>G: Submit trusted telemetry (Raw Payload)
+    activate G
+    G->>G: Validate payload structure & cryptographic signatures
+    G->>V: Dispatch for verification (ZKP / Metadata)
+    deactivate G
+    
+    activate V
+    V->>V: Generate verifiable digital evidence
+    V->>R: Commit state transition (Register Evidence)
+    deactivate V
+    
+    activate R
+    R-->>G: Emit Transaction Receipt (Proof of Registry)
+    deactivate R
+    
+    G-->>D: Acknowledged & Ingested (Success status)
 
-    H->>G: Submit trusted telemetry
-    G->>V: Validate integrity
-    V->>R: Register evidence
-    R-->>G: Confirmation
-    G-->>H: Accepted
-```
+| Segment | Core Component | Functional Responsibility |
+| :--- | :--- | :--- |
+| **Edge Device** | `Acquisition` | Captures high-fidelity industrial telemetry directly from physical hardware interfaces[cite: 2]. |
+| **Secure Gateway** | `Ingestion & Sanitization` | Handles edge connections, parses raw events, and executes cryptographic validation checks. |
+| **Verification Layer** | `Cryptography & Trust` | Generates deterministic, verifiable proofs of state and weight values[cite: 2]. |
+| **Evidence Registry** | `Immutability` | Operates as a distributed ledger to guarantee long-term, tamper-evident auditability[cite: 2]. |
 
----
+## Core Design Principles
 
-# Public Architecture
+| Principle | Description |
+|-----------|-------------|
+| 🔒 **Hardware-Assisted Trust** | Establishes hardware-rooted trust as the foundation for secure acquisition of physical events. |
+| 📡 **Verifiable Telemetry** | Produces cryptographically verifiable telemetry that can be independently validated across organizational boundaries. |
+| ⚡ **Cryptographic Integrity** | Protects telemetry throughout its lifecycle using modern cryptographic primitives, ensuring authenticity and integrity. |
+| 🛡️ **Tamper-Evident Evidence** | Creates immutable, tamper-evident records that preserve the integrity and auditability of captured events. |
+| 🚂 **End-to-End Traceability** | Maintains a verifiable chain of evidence from physical acquisition through digital verification and long-term audit. |
+| 🔌 **Modular & Vendor-Neutral** | Designed with interoperable components to integrate with heterogeneous industrial environments while avoiding vendor lock-in. |
 
-| Layer | Responsibility |
-|-------|----------------|
-| Edge Hardware | Acquisition of trusted industrial telemetry |
-| Gateway | Secure ingestion and preprocessing |
-| Verification | Integrity validation and evidence generation |
-| Registry | Immutable registration of verifiable evidence |
-| Audit | Independent verification and traceability |
+> [!NOTE]
+> This repository contains the **public research implementation** of the **PoWV Protocol**.
 
----
-
-# Security Principles
-
-- Trusted telemetry acquisition
-- Cryptographic integrity protection
-- Tamper-evident evidence
-- Independent verification
-- End-to-end traceability
-- Vendor-neutral architecture
-- Hardware-assisted trust
-
----
-
-# Repository Scope
-
-This repository presents the public research implementation of the PoWV Protocol.
-
-To protect intellectual property and industrial partnerships, implementation-specific details are intentionally omitted, including:
-
-- Production firmware
-- Internal communication interfaces
-- Proprietary validation logic
-- Deployment architecture
-- Industrial integrations
-- Device provisioning procedures
-- Production cryptographic material
+> To protect intellectual property, operational security and commercial integrations, implementation-specific components are intentionally excluded from this repository. 
+These include production firmware, deployment infrastructure, proprietary industrial connectors, 
+hardware provisioning workflows and other implementation details that are not required to understand the protocol's public architecture.
