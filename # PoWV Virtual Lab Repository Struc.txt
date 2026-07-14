@@ -46,12 +46,3 @@ This document describes the exported repository structure for GitHub, excluding 
 
 ## Export guidance
 The exported GitHub repository should not include secrets or industrial artifacts.
-
-Exclude or remove before export:
-- `device_priv.pem` — private device key material.
-- `device_pub.pem` — device public key output used for provisioning tests.
-- `.venv/` — local Python virtual environment.
-- `logs/` — runtime logs and generated evidence files.
-- `*.pem`, `*.key`, `*.db`, `*.db-shm`, `*.db-wal`, `*.bin`, `*.log` — secret and generated artifacts.
-
-The file tree above represents the public structural view of the repository without industrial secret material.
