@@ -74,49 +74,109 @@ The global market for physical asset verification spans trillions of dollars acr
 
 
 Repository Structure
+Directory	Scope
+firmware/	Embedded and edge-side components for telemetry acquisition, device interaction, and physical-event processing
+core/	Core PoWV protocol logic, event processing, validation rules, and state-management components
+security/	Cryptographic architecture, hardware-root-of-trust research, integrity controls, and security-related components
+docs/	Technical documentation, protocol specifications, architecture notes, validation records, and diagrams
+README.md	Project overview, scope, development status, and navigation
 
-├── firmware/         # Edge computing telemetry and physical oracle scripts
-├── core/             # PoWV consensus logic and state validation
-├── security/         # Cryptographic HSM configs, hardware root-of-trust & auditing
-├── docs/             # Technical specifications and architectural diagrams
-└── README.md         # Protocol overview
+The repository structure is intended to keep protocol logic, embedded development, security engineering, and public technical documentation clearly separated as the architecture evolves.
 
 Founder & Chief Architect
 
 Gabriel de Almeida Santos Silva
 
-Areas of expertise include:
+Founder and Chief Architect of the PoWV Protocol.
 
-Protocol architecture & Blockchain engineering
+His work on PoWV spans protocol architecture, cyber-physical systems, blockchain infrastructure, enterprise systems integration, and the design of mechanisms for representing physical events as verifiable digital evidence.
 
-Infrastructure & Enterprise systems design
+Primary areas of work include:
 
-Macroeconomic modeling
-
+protocol architecture and distributed systems;
+blockchain and digital-asset infrastructure;
+cyber-physical and edge systems;
+hardware-to-software integration;
+cryptographic integrity and provenance;
+enterprise systems architecture;
+infrastructure and institutional integration;
+economic and asset-modeling frameworks.
 Strategic Direction
 
-PoWV is being developed with a long-term focus on enterprise adoption, institutional integration,
-regulatory compatibility, and scalable infrastructure.
+PoWV is being developed as infrastructure for environments in which digital systems depend on evidence originating from physical processes.
 
-Philosophy: Bitcoin proved digital scarcity. PoWV focuses on verifiable physical integrity.
+The long-term direction includes:
 
-Status
+enterprise integration;
+industrial and logistics environments;
+hardware-backed event integrity;
+interoperability with existing enterprise systems;
+digital representation of physical assets and events;
+auditability and provenance;
+institutional and regulatory compatibility;
+scalable edge and distributed infrastructure.
 
-Current Stage: Research & Architecture / Enterprise Framework Development
+The project is being developed incrementally through architecture work, laboratory validation, hardware integration, software prototypes, and controlled proof-of-concept environments.
 
-Exploration: Strategic Partnerships
+Design Philosophy
+
+Bitcoin demonstrated that digital scarcity could be enforced through cryptographic and distributed systems. PoWV explores how comparable principles of verification can be extended to events originating in the physical world.
+
+The protocol is therefore concerned not only with digital records, but with the transition between a physical event and the digital evidence used to represent, validate, and audit that event.
+
+Development Status
+
+Current stage: Research, architecture, laboratory prototyping, and enterprise-framework development.
+
+Current work includes:
+
+physical-to-digital event acquisition;
+structured event representation;
+edge-device integration;
+cryptographic integrity mechanisms;
+hardware-root-of-trust research;
+validation and audit architecture;
+laboratory-scale cyber-physical integrations;
+enterprise interoperability studies.
+
+Selected components have reached functional proof-of-concept stage, while other parts of the architecture remain under active research and development.
+
+Current engagement: Technical evaluation, research collaboration, and strategic partnerships.
+
+Public Technical Repositories
+
+The PoWV organization separates public documentation, experimental work, security engineering, and implementation-specific material according to their technical scope and disclosure requirements.
+
+Public repositories may include:
+
+protocol architecture;
+laboratory validation records;
+integration modules;
+embedded-system research;
+technical specifications;
+public-safe implementation examples;
+project status and development milestones.
+
+Implementation details considered proprietary, security-sensitive, or operationally confidential may remain in access-controlled environments.
 
 Contact & Official Channels
 
-Partnerships, enterprise collaboration, and research inquiries:
+For technical discussions, institutional collaboration, research, and partnership inquiries:
 
-Email: gabriel@powvprotocol.com / powv.protocol@proton.me
+Email
+gabriel@powvprotocol.com
+powv.protocol@proton.me
 
-Official Web: powvprotocol.com | powvprotocol.org
+Official Web
+powvprotocol.com
+powvprotocol.org
 
-Legal Notice
+Intellectual Property
 
-The PoWV Protocol, associated methodologies, architectural frameworks, and related intellectual
-property may be protected by applicable intellectual property laws.
+The PoWV Protocol includes original work in protocol architecture, cyber-physical integration, event representation, verification models, hardware integration, and associated technical methodologies.
+
+Certain implementations, architectural elements, documentation, methods, and related technical assets may constitute proprietary intellectual property and may be protected under applicable copyright, trade-secret, contractual, or other intellectual-property frameworks.
+
+Publication of material in a public repository does not imply disclosure of non-public implementation details or grant rights beyond those expressly provided by the applicable repository license.
 
 Copyright © 2026 Gabriel de Almeida Santos Silva. All rights reserved.
