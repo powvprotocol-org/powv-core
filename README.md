@@ -72,7 +72,7 @@ The next decade of financial infrastructure will depend heavily on Real World As
 ### Market Opportunity
 The global market for physical asset verification spans trillions of dollars across commodities, logistics, manufacturing, environmental assets, and infrastructure finance. As capital markets increasingly demand stronger transparency, the need for reliable verification infrastructure continues to grow.
 
-```text
+
 Repository Structure
 
 ├── firmware/         # Edge computing telemetry and physical oracle scripts
