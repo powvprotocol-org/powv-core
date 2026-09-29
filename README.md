@@ -1,182 +1,170 @@
 # PoWV Protocol (Proof of Weighted Value)
 
 **Proof of Weighted Value**  
-*Enterprise-grade infrastructure for Real World Asset (RWA) verification.*
+*Reference architecture and laboratory implementation for physical-to-digital evidence and Real-World Asset (RWA) verification.*
 
 ---
 
-##  Overview
+## Overview
 
-The PoWV (Proof of Weighted Value) Protocol is an enterprise infrastructure designed to bridge the gap between physical world events and digital financial systems.
+The PoWV Protocol is a research and engineering framework for representing physical events as traceable digital evidence that can be evaluated by audit, enterprise, and financial systems.
 
-Modern industries generate massive amounts of real value through logistics, commodities, environmental processing, and industrial operations. However, a critical problem remains unsolved: **How can physical truth be verified with mathematical certainty?**
+Modern industries generate operational evidence through logistics, commodities, environmental processing, and industrial systems. A central engineering problem remains: **How can a physical measurement be captured, normalized, authenticated, and audited without overstating what the digital record proves?**
 
-PoWV solves this challenge by creating a secure integrity layer for physical-to-digital verification.
+PoWV investigates this boundary through structured events, cryptographic integrity controls, edge validation, replay protection, and auditable evidence aggregation.
 
 ---
 
-##  The Problem
+## The Problem
 
 Global industries still rely heavily on:
-* Paper-based workflows
-* Manual validation
-* Fragmented databases
-* Centralized trust assumptions
 
-This creates systemic vulnerabilities such as fraud, duplicate records, unverifiable ESG claims, inefficient audits, and expensive compliance. The gap between what physically occurred and what was digitally recorded remains one of the largest unresolved inefficiencies in global markets.
+- Paper-based workflows
+- Manual validation
+- Fragmented databases
+- Centralized trust assumptions
 
----
-
-##  The Vision
-
-PoWV aims to become a foundational infrastructure for trust-minimized verification of Real World Assets (RWAs). The protocol enables enterprises to build systems where physical events are captured, verified, audited, and settled with strong integrity guarantees.
-
-> **Core Principle:** Verifiable physical truth creates economic certainty. This allows physical processes to become more transparent, auditable, and bankable.
+These conditions create opportunities for duplicate records, unverifiable claims, inefficient audits, and expensive compliance. A cryptographically protected record can improve integrity and provenance, but it cannot independently establish that the originating physical measurement was correct.
 
 ---
 
-##   Use Cases
+## The Vision
 
-PoWV is designed for high-trust industries, including:
+PoWV aims to provide a reference architecture for trust-minimized handling of evidence associated with Real-World Assets. The protocol is intended to support systems in which physical events are captured, normalized, validated, and audited under explicit trust assumptions.
 
-* **Supply Chain & Logistics:** Freight verification, warehouse integrity, inventory validation, shipment tracking.
-* **Agriculture:** Commodity traceability, crop verification, warehouse receipts, supply-chain financing.
-* **Recycling & Circular Economy:** Reverse logistics, environmental credits, waste verification, ESG compliance.
-* **Insurance:** Parametric insurance, automated claims, fraud reduction.
-* **Government & Public Infrastructure:** Procurement verification, anti-corruption systems, audit transparency.
+> **Core principle:** Cryptography can establish the integrity, provenance, and processing history of a digital event. It does not, by itself, prove that the originating physical event was true.
 
 ---
 
-##   Enterprise Benefits
+## Use Cases
 
-Organizations using PoWV may achieve:
-* **Reduced Fraud Exposure:** Improved traceability reduces manipulation and false reporting.
-* **Lower Audit Costs:** Verification processes become faster and more reliable.
-* **Better Capital Efficiency:** Verified assets can unlock financing opportunities.
-* **Improved Compliance:** Stronger evidence improves reporting confidence.
-* **Higher Operational Trust:** Stakeholders gain stronger confidence in underlying data.
+PoWV is being researched for high-assurance environments, including:
+
+- **Supply Chain and Logistics:** Freight verification, warehouse records, inventory validation, and shipment tracking.
+- **Agriculture:** Commodity traceability, warehouse receipts, and supply-chain finance evidence.
+- **Recycling and Circular Economy:** Reverse logistics, waste records, environmental reporting, and evidence associated with credit issuance.
+- **Insurance:** Evidence inputs for parametric products, claims review, and fraud controls.
+- **Government and Public Infrastructure:** Procurement evidence, operational auditability, and chain-of-custody controls.
 
 ---
 
-##   Technology Philosophy
+## Potential Operational Benefits
 
-PoWV combines principles from multiple advanced fields:
-* Distributed systems & Protocol design
-* Cryptography & Hardware security
-* Industrial IoT & Edge computing
-* Financial engineering
+When supported by appropriate operational controls and independent validation, PoWV-based systems may support:
+
+- **Reduced Fraud Exposure:** Traceability can reduce opportunities for record manipulation and duplicate reporting.
+- **Lower Audit Effort:** Structured evidence can reduce manual reconciliation and make verification procedures more repeatable.
+- **Financing Readiness:** Auditable asset records may support due diligence and financing decisions.
+- **Improved Compliance Evidence:** Provenance and validation records can strengthen reporting controls.
+- **Higher Operational Transparency:** Stakeholders can evaluate the origin, transformation, and validation history of event data.
+
+---
+
+## Technology Philosophy
+
+PoWV combines principles from multiple engineering domains:
+
+- Distributed systems and protocol design
+- Cryptography and hardware security
+- Industrial IoT and edge computing
+- Financial and asset-modeling systems
 
 ### Why PoWV Matters
-The next decade of financial infrastructure will depend heavily on Real World Assets. Tokenization alone is insufficient. Before an asset can be financed, traded, or insured, one question must be answered: **Is the underlying physical reality trustworthy?** PoWV focuses on this foundational layer.
 
-### Market Opportunity
-The global market for physical asset verification spans trillions of dollars across commodities, logistics, manufacturing, environmental assets, and infrastructure finance. As capital markets increasingly demand stronger transparency, the need for reliable verification infrastructure continues to grow.
+Digital representation alone is insufficient for systems that depend on physical assets. Before an event can inform financing, settlement, insurance, or compliance, its source, encoding, identity, integrity, and validation path must be reviewable. PoWV focuses on this evidence boundary.
 
+### Market Context
 
-Repository Structure
-Directory	Scope
-firmware/	Embedded and edge-side components for telemetry acquisition, device interaction, and physical-event processing
-core/	Core PoWV protocol logic, event processing, validation rules, and state-management components
-security/	Cryptographic architecture, hardware-root-of-trust research, integrity controls, and security-related components
-docs/	Technical documentation, protocol specifications, architecture notes, validation records, and diagrams
-README.md	Project overview, scope, development status, and navigation
+Physical-event verification is relevant to commodities, logistics, manufacturing, environmental assets, and infrastructure finance. This repository documents technical research and laboratory validation; it does not constitute market validation or a production-service claim.
 
-The repository structure is intended to keep protocol logic, embedded development, security engineering, and public technical documentation clearly separated as the architecture evolves.
+## Current Repository Contents
 
-Founder & Chief Architect
+| Path | Scope |
+| --- | --- |
+| `README.md` | Project overview, scope, maturity, and public evidence boundaries |
+| `Repository Structure` | Architecture and repository-organization reference |
+| `# PoWV Virtual Lab Repository Struc.txt` | Historical Virtual Lab structure note |
+| `sandbox repository` | Sandbox reference material |
+| `tools/` | Public utilities and supporting material |
 
-Gabriel de Almeida Santos Silva
+This table describes the repository as it exists today. Proposed directories and future components should be documented as roadmap items until they are present in the public tree.
 
-Founder and Chief Architect of the PoWV Protocol.
+## Founder and Chief Architect
 
-His work on PoWV spans protocol architecture, cyber-physical systems, blockchain infrastructure, enterprise systems integration, and the design of mechanisms for representing physical events as verifiable digital evidence.
+**Gabriel de Almeida Santos Silva** is the founder and chief architect of the PoWV Protocol. His work focuses on protocol architecture, cyber-physical systems, edge integration, cryptographic integrity, provenance, and evidence models for physical events.
 
-Primary areas of work include:
+## Strategic Direction
 
-protocol architecture and distributed systems;
-blockchain and digital-asset infrastructure;
-cyber-physical and edge systems;
-hardware-to-software integration;
-cryptographic integrity and provenance;
-enterprise systems architecture;
-infrastructure and institutional integration;
-economic and asset-modeling frameworks.
-Strategic Direction
+PoWV is being developed for environments in which digital systems depend on evidence originating from physical processes. The long-term direction includes:
 
-PoWV is being developed as infrastructure for environments in which digital systems depend on evidence originating from physical processes.
+- Enterprise and industrial integration
+- Hardware-backed event integrity
+- Interoperability with operational systems
+- Digital representation of physical assets and events
+- Auditability and provenance
+- Regulatory and institutional compatibility
+- Scalable edge and distributed infrastructure
 
-The long-term direction includes:
+These items describe architectural direction. They should not be interpreted as completed or production-qualified capabilities unless supported by a referenced implementation and validation record.
 
-enterprise integration;
-industrial and logistics environments;
-hardware-backed event integrity;
-interoperability with existing enterprise systems;
-digital representation of physical assets and events;
-auditability and provenance;
-institutional and regulatory compatibility;
-scalable edge and distributed infrastructure.
+## Design Philosophy
 
-The project is being developed incrementally through architecture work, laboratory validation, hardware integration, software prototypes, and controlled proof-of-concept environments.
+Bitcoin demonstrated that digital scarcity can be enforced through cryptographic and distributed systems. PoWV studies how related verification principles can be applied to evidence originating from physical processes.
 
-Design Philosophy
+The protocol therefore addresses the transition between a physical event and the digital evidence used to represent, validate, and audit that event. Its controls must be evaluated independently at the acquisition, identity, transport, validation, storage, and anchoring boundaries.
 
-Bitcoin demonstrated that digital scarcity could be enforced through cryptographic and distributed systems. PoWV explores how comparable principles of verification can be extended to events originating in the physical world.
+## Development Status
 
-The protocol is therefore concerned not only with digital records, but with the transition between a physical event and the digital evidence used to represent, validate, and audit that event.
-
-Development Status
-
-Current stage: Research, architecture, laboratory prototyping, and enterprise-framework development.
+**Current stage:** Research, architecture, laboratory prototyping, and controlled proof-of-concept development.
 
 Current work includes:
 
-physical-to-digital event acquisition;
-structured event representation;
-edge-device integration;
-cryptographic integrity mechanisms;
-hardware-root-of-trust research;
-validation and audit architecture;
-laboratory-scale cyber-physical integrations;
-enterprise interoperability studies.
+- Physical-to-digital event acquisition
+- Structured event representation
+- Edge-device integration
+- Cryptographic integrity mechanisms
+- Hardware-root-of-trust research
+- Validation and audit architecture
+- Laboratory-scale cyber-physical integrations
+- Enterprise interoperability studies
 
 Selected components have reached functional proof-of-concept stage, while other parts of the architecture remain under active research and development.
 
-Current engagement: Technical evaluation, research collaboration, and strategic partnerships.
+Current public evidence supports laboratory-scale acquisition, event normalization, cryptographic integrity checks, local edge validation, replay controls, and local audit aggregation. It does not establish production qualification, hardware-backed attestation, public-blockchain settlement, or institutional tokenization.
 
-Public Technical Repositories
+**Current engagement:** Technical evaluation, research collaboration, and strategic partnerships.
 
-The PoWV organization separates public documentation, experimental work, security engineering, and implementation-specific material according to their technical scope and disclosure requirements.
+## Public Technical Repositories
+
+The PoWV organization separates public documentation, experimental work, security engineering, and implementation-specific material according to technical scope and disclosure requirements.
 
 Public repositories may include:
 
-protocol architecture;
-laboratory validation records;
-integration modules;
-embedded-system research;
-technical specifications;
-public-safe implementation examples;
-project status and development milestones.
+- Protocol architecture
+- Laboratory validation records
+- Integration modules
+- Embedded-system research
+- Technical specifications
+- Public-safe implementation examples
+- Project status and development milestones
 
 Implementation details considered proprietary, security-sensitive, or operationally confidential may remain in access-controlled environments.
 
-Contact & Official Channels
+## Contact and Official Channels
 
 For technical discussions, institutional collaboration, research, and partnership inquiries:
 
-Email
-gabriel@powvprotocol.com
-powv.protocol@proton.me
+- **Email:** gabriel@powvprotocol.com
+- **Email:** powv.protocol@proton.me
+- **Web:** [powvprotocol.com](https://powvprotocol.com)
+- **Web:** [powvprotocol.org](https://powvprotocol.org)
 
-Official Web
-powvprotocol.com
-powvprotocol.org
-
-Intellectual Property
+## Intellectual Property
 
 The PoWV Protocol includes original work in protocol architecture, cyber-physical integration, event representation, verification models, hardware integration, and associated technical methodologies.
 
 Certain implementations, architectural elements, documentation, methods, and related technical assets may constitute proprietary intellectual property and may be protected under applicable copyright, trade-secret, contractual, or other intellectual-property frameworks.
 
-Publication of material in a public repository does not imply disclosure of non-public implementation details or grant rights beyond those expressly provided by the applicable repository license.
+Publication in a public repository does not disclose non-public implementation details or grant rights beyond those expressly provided by the applicable repository license.
 
 Copyright © 2026 Gabriel de Almeida Santos Silva. All rights reserved.
