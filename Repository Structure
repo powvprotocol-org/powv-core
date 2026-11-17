@@ -1,3 +1,29 @@
+HISTORICAL SANDBOX REFERENCE — NOT A CURRENT IMPLEMENTATION SPECIFICATION
+Reviewed: 2026-11-17
+
+This document preserves an early illustrative sandbox draft. The sections labelled
+"File" below are embedded examples, not separate runnable files in this repository.
+Historical claims and quick-start instructions in the preserved draft are superseded
+by this notice and the current repository README.
+
+Known limitations of this draft:
+- unpack_and_verify returns signature_verified=True without verifying a signature.
+- The example truncates/pads a DER-encoded ECDSA signature; this is not a valid
+  conversion to a fixed-width raw signature.
+- The gateway checks packet length and repeated signature bytes, not authenticity.
+  Its in-memory duplicate state is lost on restart.
+- Software-generated keys do not demonstrate an HSM or hardware-rooted identity.
+- No zero-knowledge proof or distributed consensus is implemented by these examples.
+- Appending a local log does not establish immutable or durable audit storage.
+- Historical security, production, and compliance wording is not a validation result.
+
+Do not use this draft as a cryptographic implementation or deployment guide.
+Current scope and maturity: https://github.com/powvprotocol-org/powv-core
+Physical integration record:
+https://github.com/powvprotocol-org/powv-scale-edge-integration
+
+---------------- BEGIN PRESERVED HISTORICAL DRAFT ----------------
+
 File 1: .gitignore
 # Virtual environments
 .venv/
