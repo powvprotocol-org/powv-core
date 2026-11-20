@@ -176,8 +176,8 @@ Implementation details considered proprietary, security-sensitive, or operationa
 
 For technical discussions, institutional collaboration, research, and partnership inquiries:
 
-- **Email:** gabriel@powvprotocol.com
-- **Email:** powv.protocol@proton.me
+- **Official contact:** gabriel@powvprotocol.com
+- **Support:** powv.protocol@proton.me
 - **Web:** [powvprotocol.com](https://powvprotocol.com)
 - **Web:** [powvprotocol.org](https://powvprotocol.org)
 
