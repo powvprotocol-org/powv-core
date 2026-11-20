@@ -84,7 +84,7 @@ Physical-event verification is relevant to commodities, logistics, manufacturing
 | `README.md` | Project overview, scope, maturity, and public evidence boundaries |
 | `HISTORY.md` | Note on the retired historical sandbox draft and where current evidence is published |
 
-This table describes the repository as it exists today. Planned components appear in the roadmap.
+This table describes the repository as it exists today. Planned components are described under [Strategic Direction](#strategic-direction).
 
 ## Founder and Chief Architect
 
