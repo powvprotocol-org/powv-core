@@ -130,9 +130,34 @@ Current work includes:
 
 Selected components have reached functional proof-of-concept stage, while other parts of the architecture remain under active research and development.
 
-Current public evidence supports laboratory-scale acquisition, event normalization, cryptographic integrity checks, local edge validation, replay controls, and local audit aggregation. It does not establish production qualification, hardware-backed attestation, public-blockchain settlement, or institutional tokenization.
+Current public evidence supports:
+
+- laboratory-scale acquisition from a real weighing instrument, event normalization, integrity identification and local transport to an embedded receiver ([September 18, 2026 record](https://github.com/powvprotocol-org/powv-scale-edge-integration/blob/main/docs/integration-module/experimental-record.md));
+- selected software checks for malformed input, simulated tampering and repeated-run consistency in a controlled environment ([September 6, 2026 record](https://powv-protocol.gitbook.io/powv-protocol-docs/project-status/validation-evidence)).
+
+Later software engineering work is recorded separately as experimental and unmerged ([November 20, 2026 update](https://github.com/powvprotocol-org/powv-lab-status/blob/main/status/2026-11-software-engineering-update.md)).
+
+Public evidence does not establish:
+
+- independent edge verification;
+- persistent duplicate handling;
+- production qualification;
+- hardware-backed attestation;
+- public-blockchain settlement;
+- institutional tokenization.
 
 **Current engagement:** Technical evaluation, research collaboration, and strategic partnerships.
+
+## Product Proposals
+
+The proposed PoWV portfolio is documented in [Product Proposals](https://powv-protocol.gitbook.io/powv-protocol-docs/product-proposals/):
+
+- **PoWV Protocol Suite**;
+- **PoWV EdgeGuard**;
+- **PoWV Secure Capture Node**;
+- **PoWV Digital Treasury**, an EdgeGuard profile.
+
+None of these products is commercially available. Their maturity is stated in [Maturity and Availability](https://powv-protocol.gitbook.io/powv-protocol-docs/product-proposals/maturity).
 
 ## Public Technical Repositories
 
