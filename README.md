@@ -82,10 +82,7 @@ Physical-event verification is relevant to commodities, logistics, manufacturing
 | Path | Scope |
 | --- | --- |
 | `README.md` | Project overview, scope, maturity, and public evidence boundaries |
-| `Repository Structure` | Architecture and repository-organization reference |
-| `# PoWV Virtual Lab Repository Struc.txt` | Historical Virtual Lab structure note |
-| `sandbox repository` | Sandbox reference material |
-| `tools/` | Public utilities and supporting material |
+| `HISTORY.md` | Note on the retired historical sandbox draft and where current evidence is published |
 
 This table describes the repository as it exists today. Proposed directories and future components should be documented as roadmap items until they are present in the public tree.
 
