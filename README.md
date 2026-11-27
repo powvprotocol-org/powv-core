@@ -1,6 +1,5 @@
-# PoWV Protocol (Proof of Weighted Value)
+# PoWV Protocol
 
-**Proof of Weighted Value**  
 *Reference architecture and laboratory implementation for physical-to-digital evidence and Real-World Asset (RWA) verification.*
 
 ---
